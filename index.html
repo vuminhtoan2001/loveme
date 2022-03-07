@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Thế giới của anhhhh</title>
+    <title>Vũ Minh Toán | I love you</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,18 +12,15 @@
     <link rel="stylesheet" type="text/css" href=" https://fonts.googleapis.com/css?family=Pacifico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
+  <script type='text/javascript'> ! function (e, t, a) { function n() { c( ".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 75%;-webkit-border-radius: 75%;-moz-border-radius: 75%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}" ), o(), r() } function r() { for (var e = 0; e < d.length; e++) d[e].alpha <= 0 ? (t.body.removeChild(d[e].el), d.splice(e, 1)) : (d[e].y--, d[e].scale += .004, d[e].alpha -= .013, d[e].el.style.cssText = "left:" + d[e].x + "px;top:" + d[e].y + "px;opacity:" + d[e].alpha + ";transform:scale(" + d[e].scale + "," + d[e].scale + ") rotate(45deg);background:" + d[e].color + ";z-index:99999"); requestAnimationFrame(r) } function o() { var t = "function" == typeof e.onclick && e.onclick; e.onclick = function (e) { t && t(), i(e) } } function i(e) { var a = t.createElement("div"); a.className = "heart", d.push({ el: a, x: e.clientX - 5, y: e.clientY - 5, scale: 1, alpha: 3, color: s() }), t.body.appendChild(a) } function c(e) { var a = t.createElement("style"); a.type = "text/css"; try { a.appendChild(t.createTextNode(e)) } catch (t) { a.styleSheet.cssText = e } t.getElementsByTagName("head")[0].appendChild(a) } function s() { return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")" } var d = []; e.requestAnimationFrame = function () { return e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) { setTimeout(e, 300) } }(), n() }(window, document); </script>
   <body>
     <div class="wrapper">
       <!-- Preloader -->
-    <div id="preloader">
-      <div class="spinner">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
+      <div id="preloader">
+        <div class="pre__container">
+          <div class="heart_spiner"></div>
+        </div>
       </div>
-  </div>
       <div id="bg"></div>
       <div class="content">
         <header>
@@ -36,7 +33,54 @@
     </div>
 
     <!-- 4. Thay đổi nhạc -->
-    <audio src="./sound/sound.mp3" autoplay></audio>
+    <!-- <audio id="autoplay" src="./sound/erik-cukak-remix-audio-lyrics-video.mp3"></audio>
+    <audio id="autoplay2" src="./sound/sound.mp3"></audio>
+    <audio id="autoplay3" src="./sound/havuongnang.mp3"></audio> -->
+    <!-- Typing effect -->
+    <h1 style="font-family: 'Pacifico';">Vũ Minh Toán</h1>
+    <div class="container">
+      <p id="demo"style="z-index: 99999999;position: absolute;font-family: 'Pacifico';padding:5px"></p>
+    </div>
+    <script>
+      if(document.documentElement.clientWidth > 768){
+        document.getElementById("demo").style.width = "450px";
+      }else if(document.documentElement.clientWidth > 576 && document.documentElement.clientWidth <= 768 ){
+        document.getElementById("demo").style.width = "450px";
+
+      }else{
+        document.getElementById("demo").style.width = "90%";
+
+      }
+      var i = 0;
+      var txt = `Mùi hương hoa Diên Vĩ hay là hương tóc mềm
+      Ngàn vì sao chẳng sáng hơn đôi mắt em
+      Thật đẹp đến trăng thẹn thùng phải nấp sau mây
+      Vậy thì cớ sao anh đây lại nỡ buông tay
+      Ừ thì anh không muốn phải nhìn thấy em buồn
+      Chuyện tình yêu nếu như không thể nắm thì buông
+      Tự nhiên không biết vì lẽ gì
+      Cứ lại tự kìm lòng suốt thôi
+      Cây không muốn lá rời cành
+        Khi lá vẫn còn xanh
+        Yêu đương khó quá thì chạy về khóc với anh
+        Một người luôn yêu em nhất
+        Chắc chắn sẽ không bỏ đi khiến em phải buồn được đâu
+        Phong ba sóng gió phủ đầu
+        Anh vẫn đứng đằng sau
+        Tình yêu có duyên thì tự tìm đến với nhau
+        Dù sao anh cũng vui lòng
+        Làm người anh trai đến suốt đời này được không?
+        `;
+        var speed = 65;
+
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("demo").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
