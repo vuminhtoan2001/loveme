@@ -3,7 +3,9 @@ var audio_jukySan = new Audio('sound/sound.mp3');
 var audio_erik = new Audio('sound/erik-cukak-remix-audio-lyrics-video.mp3');
 var audio_justatee = new Audio('sound/da-lo-yeu-em-nhieu-official-mv.mp3');
 $(document).ready(function() {
-    audio_erik.play();
+    (function() {
+        audio_erik.play();
+    })()
     setTimeout(function() {
         firstQuestion();
         $('.spinner').fadeOut();
@@ -62,7 +64,7 @@ function loopQ2(){
     $('.spinner').fadeOut();
     $('#preloader').delay(5000).fadeOut('slow');
     Swal.fire({
-        title: "He he mất nút kia rồi còn một nút này thôi! 😹",
+        title: "He he mất nút kia rồi còn một nút này thôi! ",
         text: CONFIG.introDesc,
 
         // 2. Ảnh ở câu hỏi đầu tiên
@@ -101,7 +103,6 @@ function init(){
 function firstQuestion(){
     $('.content').hide();
     loopQ1();
-
 }
 function secondQuestion(){
     // audio_jukySan.play();

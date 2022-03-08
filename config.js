@@ -10,10 +10,10 @@ const CONFIG = {
     question:'Nói cho Anh biết đi vì sao Em thích anh 😊😊',
     reasonPlaceholder: 'Do không bấm được nút kia hay do 😍...',
     btnReply: 'Gởi ! 💌💌',
-    reply: 'Tại vì anh đẹp trai đã thế còn độc và lạ ahihi....................',
+    reply: 'Tại vì anh dễ thương quá ahihi....................<3))))))))))))',
     mess: 'Anh biết mà, Anh cũng thích em lắm 🥰. Love you <3:)(0) 😘😘',
     messDesc: '💬💬 Nhắn tin cho Anh nha. 💬💬',
     btnAccept: 'Ok lun 💘',
-    messLink: 'https://www.messenger.com/t/vu.minhtoan.98837/',
+    messLink: 'https://m.me/vu.minhtoan.98837',
     step2Link: 'https://vuminhtoan2001.github.io/lovemoon_step2/'
 }
