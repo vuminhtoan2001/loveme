@@ -1,9 +1,9 @@
 var audio_datkaa = new Audio('sound/havuongnang.mp3');
 var audio_jukySan = new Audio('sound/sound.mp3');
-var audio_erik = new Audio('sound/erik-cukak-remix-audio-lyrics-video.mp3');
 var audio_justatee = new Audio('sound/da-lo-yeu-em-nhieu-official-mv.mp3');
 $(document).ready(function() {
     (function() {
+        var audio_erik = new Audio('sound/erik-cukak-remix-audio-lyrics-video.mp3');
         audio_erik.play();
     })()
     setTimeout(function() {
