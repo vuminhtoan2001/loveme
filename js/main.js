@@ -3,18 +3,20 @@ var audio_jukySan = new Audio('sound/sound.mp3');
 var audio_erik = new Audio('sound/erik-cukak-remix-audio-lyrics-video.mp3');
 var audio_justatee = new Audio('sound/da-lo-yeu-em-nhieu-official-mv.mp3');
 $(document).ready(function() {
-    (function() {
-        audio_erik.play();
-    })()
-    setTimeout(function() {
-        firstQuestion();
-        $('.spinner').fadeOut();
-        $('#preloader').delay(59000).fadeOut('slow');
-        $('body').delay(9950).css({
-            'overflow': 'visible'
-        });
-    }, 0);
-    setTimeout(typeWriter(),4000)
+    $('#begin').click(function() {
+        (function() {
+            audio_erik.play();
+        })()
+        setTimeout(function() {
+            firstQuestion();
+            $('.spinner').fadeOut();
+            $('#preloader').delay(59000).fadeOut('slow');
+            $('body').delay(9950).css({
+                'overflow': 'visible'
+            });
+        }, 0);
+        setTimeout(typeWriter(),4000);
+    });
 })
 function loopQ1(){
     setTimeout(()=>{
@@ -53,7 +55,33 @@ function loopQ1(){
             audio_jukySan.play()
             $('.content').show(200);
           } else {
-            loopQ2();
+            Swal.fire({
+                title: "He he mất nút kia rồi còn một nút này thôi! ",
+                text: CONFIG.introDesc,
+
+                // 2. Ảnh ở câu hỏi đầu tiên
+                imageUrl: 'https://raw.githubusercontent.com/zukahai/Confess-Crush/main/img/logi.gif',
+                imageWidth: 300,
+                imageHeight: 300,
+                background: `#fff url("https://cdn.dribbble.com/users/2286753/screenshots/10052587/love_background-01.jpg") 100% 100% `,
+                backdrop: `
+                      rgba(0,0,123,0.4)
+                      url("https://condaluna.com/assets/stickers/hearts-fireworks.gif")
+
+                    `,
+                imageAlt: 'Custom image',
+                denyButtonText: `Don't save`,
+                confirmButtonText: CONFIG.btnIntro
+              }).then(function(result){
+                if (result.isConfirmed) {
+                    setTimeout(()=>{
+                        audio_datkaa.pause();
+                    },0)
+                    audio_jukySan.play();
+                    $('.content').show(200);
+                }
+                secondQuestion();
+              })
           }
         secondQuestion();
       })
