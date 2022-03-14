@@ -1,8 +1,10 @@
 var audio_datkaa = new Audio('sound/havuongnang.mp3');
 var audio_jukySan = new Audio('sound/sound.mp3');
+var audio_erik = new Audio('sound/erik-cukak-remix-audio-lyrics-video.mp3');
 var audio_justatee = new Audio('sound/da-lo-yeu-em-nhieu-official-mv.mp3');
 $(document).ready(function() {
     $('#begin').click(function() {
+        console.log('click hear');
         (function() {
             audio_erik.play();
         })()
@@ -23,6 +25,7 @@ function loopQ1(){
     },63000)
     setTimeout(()=>{
         document.getElementById("demo").style.display = "none";
+        document.getElementById("tutorial").style.display = "none";
     },60000)
     // 63000
     Swal.fire({
@@ -44,9 +47,6 @@ function loopQ1(){
         cancelButtonText: 'Đánh m bh hỏi hỏi 👊🥊',
         confirmButtonText: CONFIG.btnIntro
       }).then(function(result){
-        // audio_datkaa.pause();
-
-        // $('.content').show(200);
         if (result.isConfirmed) {
             setTimeout(()=>{
                 audio_datkaa.pause();
@@ -79,17 +79,13 @@ function loopQ1(){
                     audio_jukySan.play();
                     $('.content').show(200);
                 }
-                secondQuestion();
+                loopQ2();
               })
           }
         secondQuestion();
       })
 }
 function loopQ2(){
-    $('.spinner').fadeIn();
-    $('#preloader').delay(500).fadeIn('slow');
-    $('.spinner').fadeOut();
-    $('#preloader').delay(5000).fadeOut('slow');
     Swal.fire({
         title: "He he mất nút kia rồi còn một nút này thôi! ",
         text: CONFIG.introDesc,
