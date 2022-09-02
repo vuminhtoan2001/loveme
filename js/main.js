@@ -44,7 +44,7 @@ function loopQ1(){
             `,
         imageAlt: 'Custom image',
         showCancelButton: true,
-        cancelButtonText: 'Đánh m bh hỏi hỏi 👊🥊',
+        cancelButtonText: 'Không trả lời anh đâu 👊🥊',
         confirmButtonText: CONFIG.btnIntro
       }).then(function(result){
         if (result.isConfirmed) {
@@ -135,7 +135,7 @@ $('#yes').click(function() {
     audio_jukySan.play();
     Swal.fire({
         title: CONFIG.question,
-        text: 'Do không bấm được nút kia hay là do:',
+        text: 'Lý do ...',
         html: true,
         width: 900,
         padding: '3em',
